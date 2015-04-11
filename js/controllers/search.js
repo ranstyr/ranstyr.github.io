@@ -113,14 +113,6 @@ myApp.controller('search',
 
                    }; //nextPagination
 
-
-        $scope.forsong = function (tracks) {
-            console.log("forsong");
-            for (key in tracks) {
-                console.log(tracks[key].title);
-            }
-        };
-
         $scope.MoveToImage = function (value) {
             console.log("MoveToImage");
             //add "NoImgae" in case there is no image at SC
@@ -128,7 +120,7 @@ myApp.controller('search',
                 $scope.imageurl = value.artwork_url;
                 $rootScope.imageurl = value.artwork_url;
             } else {
-                $scope.imageurl = "../development/images/icons/noimage.jpg";
+                $scope.imageurl = "../images/icons/noimage.jpg";
                 $rootScope.imageurl = $scope.imageurl;
             }
 
