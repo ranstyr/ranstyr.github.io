@@ -1,0 +1,32 @@
+<div class="meetings cf">
+
+    <h1>Hi there!</h1>
+    <p>Search Sound Cloud API for songs</p>
+
+    <div style="min-height: 40px">
+        <input id="searchInput" name="search" placeholder="search songs"
+          ng-model="search" ng-required="true">
+        <button id="buttonInput" type="submit" ng-click="searchSongs()" class="btn">Go</button>
+    </div>
+
+    <div id="searcRepeater">
+    <div class="meeting" ng-show="isList" ng-repeat="(key, value) in tracks">
+            <span class="text" ng-click="MoveToImage(value)">{{tracks[key].title }}</span>
+    </div>
+
+    <div class="tileTracks"  ng-hide="isList" ng-repeat="tileTrack in tileTracks">
+        <div class="meeting" ng-repeat="value in tileTrack">
+            <img  id="imgRepet" ng-src={{value.artwork_url}} ng-click="MoveToImage(value)"  width="5% important">
+        </div>
+    </div>
+    </div>
+
+    <div id="searchFoot">
+        <img  ng-src="../development/images/icons/nextButton.png" class="searchleft" ng-click="nextPagination()"  width="5% important">
+        <img  ng-src="../development/images/icons/tilebutton.png" ng-click="setView('')" class="searchright" ng-click="nextPagination()"margin-left=5px" height="5% important" width="5% important">
+        <img  ng-src="../development/images/icons/list_tile.png" ng-click="setView('true')" class="searchright" ng-click="nextPagination()" height="5% important" width="5% important">
+    </div>
+
+
+
+</div>

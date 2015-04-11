@@ -1,0 +1,8 @@
+<div class="meetings cf">
+
+    <h1>Recent Search</h1>
+
+      <div class="meeting" ng-repeat="(key, value) in recentSearches">
+            <span class="text" ng-click="moveToSearch(value)">{{recentSearches[key] }}</span>
+      </div>
+</div>
