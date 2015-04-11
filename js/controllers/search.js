@@ -225,7 +225,7 @@ myApp.controller('search',
             var result = [];
             angular.forEach(data.collection, function (value, key) {
                 if (!value.artwork_url) {
-                    value.artwork_url = "../development/images/icons/noimage.jpg";
+                    value.artwork_url = "../images/icons/noimage.jpg";
                     result.push(value);
                 }
             }, log);
